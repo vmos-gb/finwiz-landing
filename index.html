@@ -3,121 +3,155 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FinWiz – Your AI Payday Coach</title>
+  <title>FinWiz - Your AI Payday Coach</title>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
+    /* Reset & basics */
+    * {
+      box-sizing: border-box;
+    }
+    body, html {
+      margin: 0; padding: 0;
+      scroll-behavior: smooth;
       font-family: 'Manrope', sans-serif;
-      background: #e8f3ff;
       color: #1a1a1a;
-      text-align: center;
-      padding: 2rem;
+      background: #f9fbff;
     }
-    header {
-      background: #cce8ff;
-      padding: 2rem;
-      border-radius: 16px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      color: #005f99;
-      margin: 0 0 0.5rem;
-    }
-    p {
-      max-width: 600px;
-      margin: 0 auto 1rem;
-      font-size: 1.2rem;
-      line-height: 1.6;
-    }
+
+    /* Navbar */
     nav {
-      margin-top: 1.5rem;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: white;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+      box-shadow: 0 2px 10px rgb(0 0 0 / 0.1);
+      z-index: 100;
     }
     nav a {
-      display: inline-block;
-      padding: 10px 20px;
-      margin: 0 10px;
-      background-color: #4A90E2;
-      color: white;
       text-decoration: none;
-      font-weight: 600;
-      border-radius: 8px;
-      transition: background-color 0.3s ease;
+      color: #4a90e2;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 8px 16px;
+      border-radius: 12px;
+      transition: background-color 0.3s ease, color 0.3s ease;
     }
-    nav a:hover {
-      background-color: #357ABD;
+    nav a:hover, nav a:focus {
+      background-color: #4a90e2;
+      color: white;
+      outline: none;
     }
-    .container {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-      max-width: 400px;
-      margin: 2rem auto;
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 120px 20px 60px; /* top padding accounts for fixed nav */
+      max-width: 720px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
     }
-    input, button {
-      padding: 10px;
-      font-size: 1rem;
-      margin-top: 20px;
-      width: 100%;
-      border-radius: 8px;
-      border: 1px solid #ccc;
+    h1, h2 {
+      margin-bottom: 1rem;
+      font-weight: 800;
+      color: #004a99;
     }
-    button {
-      background-color: #4A90E2;
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #333;
+      max-width: 560px;
+      margin: 0 auto 2rem;
+    }
+
+    /* Buttons */
+    button, .btn {
+      background-color: #4a90e2;
       color: white;
       border: none;
+      border-radius: 30px;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      font-weight: 700;
       cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: center;
+      max-width: 280px;
     }
-    button:hover {
-      background-color: #357ABD;
+    button:hover, .btn:hover {
+      background-color: #357abd;
     }
+
+    /* Input */
+    input[type="email"] {
+      padding: 12px 18px;
+      font-size: 1rem;
+      border-radius: 30px;
+      border: 1px solid #ccc;
+      max-width: 280px;
+      margin: 0 auto 1.5rem;
+      display: block;
+      text-align: center;
+    }
+
+    /* Footer */
     footer {
-      margin-top: 4rem;
+      text-align: center;
       font-size: 0.9rem;
       color: #666;
+      padding: 2rem 1rem;
+      background: #e8f3ff;
+      margin-top: 4rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        gap: 1rem;
+      }
+      section {
+        padding: 100px 16px 40px;
+      }
     }
   </style>
 </head>
 <body>
 
-  <header>
+  <nav>
+    <a href="#home" tabindex="1">Home</a>
+    <a href="#savecard" tabindex="2">SaveCard</a>
+    <a href="#about" tabindex="3">About</a>
+  </nav>
+
+  <section id="home" aria-label="Home section">
     <h1>Welcome to FinWiz</h1>
-    <p>Helping you make smarter money moves, starting the moment you get paid.</p>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="savecard.html">SaveCard</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
+    <p>Your AI-powered payday coach helping Gen Z make smarter money moves in 60 seconds or less.</p>
+  </section>
 
-  <section class="container">
+  <section id="savecard" aria-label="SaveCard section">
     <h2>FinWiz SaveCard</h2>
-    <p>Get financially confident in 60 seconds.</p>
-    <input type="email" placeholder="Enter your email" />
-    <button>Join the Waitlist</button>
+    <p>Track your savings, earn real perks, and build financial confidence — all gamified and simple.</p>
+    <input type="email" placeholder="Enter your email to join waitlist" aria-label="Email address" />
+    <button>Join Waitlist</button>
   </section>
 
-  <section>
-    <h2>🧠 What is FinWiz?</h2>
+  <section id="about" aria-label="About FinWiz section">
+    <h2>About FinWiz</h2>
     <p>
-      FinWiz is your AI-powered money coach — here to help Gen Z make better decisions in 60 seconds or less.
-      Whether you're figuring out how to save, spend, or invest, FinWiz gives you confident answers fast.
-    </p>
-  </section>
-
-  <section>
-    <h2>💳 What is SaveCard?</h2>
-    <p>
-      SaveCard is our gamified savings tracker — earn real perks when you save money, not just when you spend it.
-      Coming soon to your payday inbox.
+      FinWiz is the financial coach that gets you. Using AI, gamification, and behavioral science, we help you take control of your money — starting with your very next payday.
     </p>
   </section>
 
   <footer>
-    🚀 FinWiz is currently in stealth. Stay tuned.
+    🚀 FinWiz is currently in stealth mode. Stay tuned!
   </footer>
 
 </body>
 </html>
+
 
