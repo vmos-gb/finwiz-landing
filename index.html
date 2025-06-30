@@ -1,41 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>FinWiz – Your AI Payday Coach</title>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: Arial, sans-serif;
+      margin: 0;
+      font-family: 'Manrope', sans-serif;
+      background: #e8f3ff;
+      color: #1a1a1a;
       text-align: center;
-      margin-top: 100px;
-      background-color: #f0f6ff;
+      padding: 2rem;
+    }
+    header {
+      background: #cce8ff;
+      padding: 2rem;
+      border-radius: 16px;
     }
     h1 {
-      color: #4A90E2;
+      font-size: 2.5rem;
+      color: #005f99;
+      margin: 0 0 0.5rem;
+    }
+    p {
+      max-width: 600px;
+      margin: 0 auto 1rem;
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0066cc;
+      font-weight: 600;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 400px;
+      margin: 2rem auto;
     }
     input, button {
       padding: 10px;
       font-size: 1rem;
       margin-top: 20px;
+      width: 100%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
     }
-    .container {
-      max-width: 400px;
-      margin: auto;
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    button {
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #357ABD;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #666;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>FinWiz SaveCard</h1>
+
+  <header>
+    <h1>Welcome to FinWiz</h1>
+    <p>Helping you make smarter money moves, starting the moment you get paid.</p>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">SaveCard</a>
+      <a href="#">About</a>
+    </nav>
+  </header>
+
+  <section class="container">
+    <h2>FinWiz SaveCard</h2>
     <p>Get financially confident in 60 seconds.</p>
     <input type="email" placeholder="Enter your email" />
-    <br>
     <button>Join the Waitlist</button>
-  </div>
+  </section>
+
+  <section>
+    <h2>🧠 What is FinWiz?</h2>
+    <p>
+      FinWiz is your AI-powered money coach — here to help Gen Z make better decisions in 60 seconds or less.
+      Whether you're figuring out how to save, spend, or invest, FinWiz gives you confident answers fast.
+    </p>
+  </section>
+
+  <section>
+    <h2>💳 What is SaveCard?</h2>
+    <p>
+      SaveCard is our gamified savings tracker — earn real perks when you save money, not just when you spend it.
+      Coming soon to your payday inbox.
+    </p>
+  </section>
+
+  <footer>
+    🚀 FinWiz is currently in stealth. Stay tuned.
+  </footer>
+
 </body>
 </html>
 
