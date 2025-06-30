@@ -1,0 +1,30 @@
+body {
+  background: #e8f3ff;
+  color: #1a1a1a;
+  margin: 0;
+  font-family: 'Manrope', sans-serif;
+}
+
+header {
+  background: #cce8ff;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 10px;
+}
+
+nav a {
+  margin: 0 1rem;
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
